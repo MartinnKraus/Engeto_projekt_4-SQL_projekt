@@ -4,8 +4,10 @@
 
 SELECT 
 	*
-from czechia_payroll cp
-join czechia_payroll_calculation cpc
-	on cp.calculation_code = cpc.code
-join czechia_payroll_industry_branch cpib 
-	on cp.industry_branch_code  = cpib.code
+FROM czechia_payroll cp
+JOIN czechia_payroll_calculation cpc
+	ON cp.calculation_code = cpc.code
+JOIN czechia_payroll_industry_branch cpib 
+	ON cp.industry_branch_code  = cpib.code
+JOIN czechia_payroll_unit cpu 
+	ON	cp.unit_code = cpu.code 
